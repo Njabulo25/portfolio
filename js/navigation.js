@@ -1,6 +1,7 @@
 /* =========================================================
    NAVIGATION.JS
-   Active section detection, completed ticks, smooth scroll
+   Active section detection, completed ticks, smooth scroll,
+   mobile menu toggle, header scroll state
    ========================================================= */
 
 (function () {
@@ -16,8 +17,10 @@
     'contact'
   ];
 
-  const header   = document.querySelector('.site-header');
-  const navItems = document.querySelectorAll('.nav-item');
+  const header     = document.querySelector('.site-header');
+  const navItems   = document.querySelectorAll('.nav-item');
+  const navList    = document.getElementById('primaryNav');
+  const menuToggle = document.getElementById('menuToggle');
 
   const visited = new Set();
   let currentActiveId = null;
@@ -59,16 +62,38 @@
     });
   }
 
-  /* ---------------------------------------------------------
-     When a section becomes active, mark everything above it
-     as completed.
-     --------------------------------------------------------- */
   function updateCompleted(currentId) {
     const currentIndex = SECTION_IDS.indexOf(currentId);
     if (currentIndex === -1) return;
 
     for (let i = 0; i < currentIndex; i++) {
       markComplete(SECTION_IDS[i]);
+    }
+  }
+
+  /* ---------------------------------------------------------
+     Mobile menu
+     --------------------------------------------------------- */
+  function openMenu() {
+    if (!navList || !menuToggle) return;
+    navList.classList.add('is-open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    menuToggle.setAttribute('aria-label', 'Close navigation menu');
+  }
+
+  function closeMenu() {
+    if (!navList || !menuToggle) return;
+    navList.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation menu');
+  }
+
+  function toggleMenu() {
+    if (!navList) return;
+    if (navList.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
     }
   }
 
@@ -90,6 +115,9 @@
 
     event.preventDefault();
 
+    // Close mobile menu if open
+    closeMenu();
+
     const headerHeight = header ? header.offsetHeight : 0;
     const targetTop =
       target.getBoundingClientRect().top +
@@ -104,17 +132,14 @@
   }
 
   /* ---------------------------------------------------------
-     Observer — fires when sections enter the viewport
+     Section observer
      --------------------------------------------------------- */
   function createSectionObserver() {
     const sections = SECTION_IDS
       .map(id => document.getElementById(id))
       .filter(Boolean);
 
-    if (!sections.length) {
-      console.warn('[navigation] No sections found');
-      return;
-    }
+    if (!sections.length) return;
 
     const options = {
       root: null,
@@ -135,21 +160,52 @@
   }
 
   /* ---------------------------------------------------------
+     Outside-click and Escape closes the menu
+     --------------------------------------------------------- */
+  function handleOutsideClick(event) {
+    if (!navList || !navList.classList.contains('is-open')) return;
+    if (navList.contains(event.target)) return;
+    if (menuToggle && menuToggle.contains(event.target)) return;
+    closeMenu();
+  }
+
+  function handleEscape(event) {
+    if (event.key === 'Escape') closeMenu();
+  }
+
+  /* ---------------------------------------------------------
      Init
      --------------------------------------------------------- */
   function init() {
     document.documentElement.classList.add('js-enabled');
 
+    // Nav link click handlers
     navItems.forEach(item => {
       const link = item.querySelector('.nav-link');
       if (link) link.addEventListener('click', handleNavClick);
     });
 
+    // Mobile menu toggle
+    if (menuToggle) {
+      menuToggle.addEventListener('click', toggleMenu);
+    }
+
+    // Outside click and Escape
+    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener('keydown', handleEscape);
+
+    // Header scroll state
     updateHeaderState();
     window.addEventListener('scroll', updateHeaderState, { passive: true });
 
+    // Active section detection
     createSectionObserver();
     setActiveSection('home');
+
+    // Close menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) closeMenu();
+    });
   }
 
   if (document.readyState === 'loading') {

@@ -1,6 +1,5 @@
 /* =========================================================
    COMPONENTS.CSS
-   Header, navigation, sections, cards, footer
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -32,6 +31,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-5);
+  position: relative;
 }
 
 .brand {
@@ -43,9 +43,7 @@
   text-decoration: none;
 }
 
-.brand:hover {
-  color: var(--color-text);
-}
+.brand:hover { color: var(--color-text); }
 
 .brand-mark {
   display: inline-flex;
@@ -78,9 +76,7 @@
   gap: var(--space-1);
 }
 
-.nav-item {
-  position: relative;
-}
+.nav-item { position: relative; }
 
 .nav-link {
   display: inline-flex;
@@ -112,9 +108,7 @@
               transform var(--transition-fast);
 }
 
-.nav-label {
-  font-weight: var(--weight-medium);
-}
+.nav-label { font-weight: var(--weight-medium); }
 
 .nav-item.is-active .nav-link {
   color: var(--color-accent);
@@ -131,6 +125,48 @@
   font-weight: var(--weight-bold);
 }
 
+/* Menu toggle — hidden on desktop */
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-fast);
+}
+
+.menu-toggle:hover { border-color: var(--color-accent); }
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 18px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform var(--transition-fast),
+              opacity var(--transition-fast);
+}
+
+/* Open state — turns hamburger into X */
+.menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Theme toggle */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -246,9 +282,7 @@
   margin-bottom: var(--space-4);
 }
 
-.status-divider {
-  margin: var(--space-4) 0;
-}
+.status-divider { margin: var(--space-4) 0; }
 
 .status-line {
   font-size: var(--font-size-sm);
@@ -266,9 +300,7 @@
   align-items: start;
 }
 
-.about-text p + p {
-  margin-top: var(--space-4);
-}
+.about-text p + p { margin-top: var(--space-4); }
 
 .about-text p {
   color: var(--color-text-muted);
@@ -389,17 +421,11 @@
   box-shadow: var(--shadow-md);
 }
 
-.project-card.is-hidden {
-  display: none;
-}
+.project-card.is-hidden { display: none; }
 
-.project-media {
-  background-color: var(--color-surface-alt);
-}
+.project-media { background-color: var(--color-surface-alt); }
 
-.project-body {
-  padding: var(--space-6);
-}
+.project-body { padding: var(--space-6); }
 
 .project-type {
   font-size: var(--font-size-xs);
@@ -433,12 +459,6 @@
   background-color: var(--color-surface-alt);
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
-}
-
-.project-tags li.tag-status {
-  background-color: var(--color-accent-soft);
-  color: var(--color-accent);
-  border-color: var(--color-accent-soft);
 }
 
 .project-details {
@@ -476,9 +496,7 @@
   gap: var(--space-3);
 }
 
-/* ---------------------------------------------------------
-   6. PROJECT GALLERY (image + thumbnails)
-   --------------------------------------------------------- */
+/* Project gallery */
 .project-gallery {
   margin: 0;
   display: flex;
@@ -498,9 +516,7 @@
   transition: transform var(--transition-slow);
 }
 
-.project-image-primary:hover {
-  transform: scale(1.005);
-}
+.project-image-primary:hover { transform: scale(1.005); }
 
 .project-thumbnails {
   display: grid;
@@ -526,7 +542,7 @@
 }
 
 /* ---------------------------------------------------------
-   7. SKILLS
+   6. SKILLS
    --------------------------------------------------------- */
 .skills-grid {
   display: grid;
@@ -556,12 +572,10 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.skill-list li:last-child {
-  border-bottom: none;
-}
+.skill-list li:last-child { border-bottom: none; }
 
 /* ---------------------------------------------------------
-   8. TIMELINE / EXPERIENCE
+   7. TIMELINE
    --------------------------------------------------------- */
 .timeline {
   display: grid;
@@ -580,9 +594,7 @@
   background-color: var(--color-border);
 }
 
-.timeline-item {
-  position: relative;
-}
+.timeline-item { position: relative; }
 
 .timeline-marker {
   position: absolute;
@@ -619,12 +631,9 @@
 }
 
 /* ---------------------------------------------------------
-   9. TECH JOURNEY
+   8. JOURNEY
    --------------------------------------------------------- */
-.journey-list {
-  display: grid;
-  gap: var(--space-4);
-}
+.journey-list { display: grid; gap: var(--space-4); }
 
 .journey-item {
   display: grid;
@@ -635,9 +644,7 @@
   border-bottom: 1px solid var(--color-border);
 }
 
-.journey-item:last-child {
-  border-bottom: none;
-}
+.journey-item:last-child { border-bottom: none; }
 
 .journey-year {
   font-size: var(--font-size-sm);
@@ -651,7 +658,7 @@
 }
 
 /* ---------------------------------------------------------
-   10. EDUCATION
+   9. EDUCATION
    --------------------------------------------------------- */
 .education-card {
   background-color: var(--color-surface);
@@ -719,7 +726,7 @@
 }
 
 /* ---------------------------------------------------------
-   11. CERTIFICATIONS
+   10. CERTIFICATIONS
    --------------------------------------------------------- */
 .cert-grid {
   display: grid;
@@ -732,6 +739,9 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
   transition: transform var(--transition-base),
               border-color var(--transition-base);
 }
@@ -760,8 +770,24 @@
   color: var(--color-text-muted);
 }
 
+.cert-link {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  transition: gap var(--transition-fast);
+}
+
+.cert-link:hover {
+  gap: var(--space-2);
+  color: var(--color-accent-hover);
+}
+
 /* ---------------------------------------------------------
-   12. SERVICES
+   11. SERVICES
    --------------------------------------------------------- */
 .services-grid {
   display: grid;
@@ -787,7 +813,7 @@
 }
 
 /* ---------------------------------------------------------
-   13. CURRENTLY
+   12. CURRENTLY
    --------------------------------------------------------- */
 .currently-grid {
   display: grid;
@@ -819,7 +845,7 @@
 }
 
 /* ---------------------------------------------------------
-   14. RESUME
+   13. RESUME
    --------------------------------------------------------- */
 .resume-card {
   background-color: var(--color-surface);
@@ -849,7 +875,7 @@
 }
 
 /* ---------------------------------------------------------
-   15. CONTACT
+   14. CONTACT
    --------------------------------------------------------- */
 .contact-grid {
   display: grid;
@@ -864,15 +890,9 @@
   margin-bottom: var(--space-4);
 }
 
-.contact-list {
-  display: grid;
-  gap: var(--space-4);
-}
+.contact-list { display: grid; gap: var(--space-4); }
 
-.contact-list li {
-  display: grid;
-  gap: var(--space-1);
-}
+.contact-list li { display: grid; gap: var(--space-1); }
 
 .contact-label {
   font-size: var(--font-size-xs);
@@ -886,19 +906,11 @@
   color: var(--color-text);
 }
 
-.contact-list a:hover {
-  color: var(--color-accent);
-}
+.contact-list a:hover { color: var(--color-accent); }
 
-.contact-form {
-  display: grid;
-  gap: var(--space-4);
-}
+.contact-form { display: grid; gap: var(--space-4); }
 
-.form-field {
-  display: grid;
-  gap: var(--space-2);
-}
+.form-field { display: grid; gap: var(--space-2); }
 
 .form-field label {
   font-size: var(--font-size-sm);
@@ -938,7 +950,7 @@
 }
 
 /* ---------------------------------------------------------
-   16. FOOTER
+   15. FOOTER
    --------------------------------------------------------- */
 .site-footer {
   border-top: 1px solid var(--color-border);
@@ -981,9 +993,7 @@
   color: var(--color-text-muted);
 }
 
-.footer-links a:hover {
-  color: var(--color-accent);
-}
+.footer-links a:hover { color: var(--color-accent); }
 
 .footer-copy-wrap {
   margin-top: var(--space-6);
@@ -998,7 +1008,7 @@
 }
 
 /* ---------------------------------------------------------
-   17. LIGHTBOX
+   16. LIGHTBOX
    --------------------------------------------------------- */
 .lightbox {
   position: fixed;
@@ -1011,9 +1021,7 @@
   padding: var(--space-5);
 }
 
-.lightbox.is-open {
-  display: flex;
-}
+.lightbox.is-open { display: flex; }
 
 .lightbox-image {
   max-width: 100%;
@@ -1038,9 +1046,7 @@
   transition: background-color var(--transition-fast);
 }
 
-.lightbox-close:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+.lightbox-close:hover { background-color: rgba(255, 255, 255, 0.2); }
 
 .lightbox-prev,
 .lightbox-next {
@@ -1064,27 +1070,59 @@
 .lightbox-next { right: var(--space-5); }
 
 .lightbox-prev:hover,
-.lightbox-next:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+.lightbox-next:hover { background-color: rgba(255, 255, 255, 0.2); }
 
 /* ---------------------------------------------------------
-   18. RESPONSIVE ADJUSTMENTS FOR LIGHTBOX NAV
+   17. RESPONSIVE — MOBILE MENU DROPDOWN
    --------------------------------------------------------- */
-@media (max-width: 560px) {
-  .lightbox-prev { left: var(--space-3); }
-  .lightbox-next { right: var(--space-3); }
-  .lightbox-prev,
-  .lightbox-next {
-    width: 38px;
-    height: 38px;
-    font-size: 1.25rem;
+@media (max-width: 768px) {
+  .menu-toggle { display: inline-flex; }
+
+  .primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-3) var(--container-pad);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height var(--transition-base),
+                opacity var(--transition-base),
+                padding var(--transition-base);
+    z-index: 99;
+  }
+
+  .primary-nav.is-open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: var(--space-4) var(--container-pad);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-item { border-bottom: 1px solid var(--color-border); }
+  .nav-item:last-child { border-bottom: none; }
+
+  .nav-link {
+    width: 100%;
+    padding: var(--space-3) var(--space-2);
+    font-size: var(--font-size-base);
+    justify-content: flex-start;
+  }
+
+  .nav-label { font-size: var(--font-size-base); }
+
+  .theme-toggle {
+    order: 2;
   }
 }
-/* ---------------------------------------------------------
-   19. CERTIFICATE LINK
-   --------------------------------------------------------- */
-.cert-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);}

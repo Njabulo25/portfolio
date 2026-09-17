@@ -19,9 +19,7 @@
     gap: var(--space-6);
   }
 
-  .hero-intro {
-    max-width: none;
-  }
+  .hero-intro { max-width: none; }
 
   .about-grid {
     grid-template-columns: 1fr;
@@ -33,21 +31,12 @@
     gap: var(--space-6);
   }
 
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .footer-inner {
-    grid-template-columns: 1fr;
-  }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-links { justify-content: flex-start; }
 
-  .footer-links {
-    justify-content: flex-start;
-  }
-
-  .project-details {
-    grid-template-columns: 120px 1fr;
-  }
+  .project-details { grid-template-columns: 120px 1fr; }
 }
 
 /* ---------------------------------------------------------
@@ -64,50 +53,15 @@
     --container-pad: 1.25rem;
   }
 
-  /* --- Header --- */
   .header-inner {
     padding: var(--space-3) var(--container-pad);
     gap: var(--space-3);
   }
 
-  .brand-text {
-    display: none;
-  }
+  .brand-text { display: none; }
 
-  /* --- Navigation: horizontal scroll --- */
-  .primary-nav {
-    order: 3;
-    flex-basis: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-bottom: var(--space-1);
-    margin: 0 calc(-1 * var(--container-pad));
-  }
+  .theme-label { display: none; }
 
-  .primary-nav::-webkit-scrollbar {
-    display: none;
-  }
-
-  .nav-list {
-    padding: 0 var(--container-pad);
-    gap: 0;
-  }
-
-  .nav-link {
-    white-space: nowrap;
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .nav-label {
-    font-size: var(--font-size-xs);
-  }
-
-  .theme-label {
-    display: none;
-  }
-
-  /* --- Hero --- */
   .section-hero {
     padding-top: var(--space-7);
     padding-bottom: var(--space-7);
@@ -118,42 +72,23 @@
     align-items: stretch;
   }
 
-  .hero-actions .btn {
-    justify-content: center;
-  }
+  .hero-actions .btn { justify-content: center; }
 
-  /* --- Projects --- */
-  .project-body {
-    padding: var(--space-5);
-  }
+  .project-body { padding: var(--space-5); }
 
   .project-details {
     grid-template-columns: 1fr;
     gap: var(--space-2);
   }
 
-  .project-details dt {
-    padding-top: var(--space-3);
-  }
+  .project-details dt { padding-top: var(--space-3); }
+  .project-details dd { padding-bottom: var(--space-3); }
 
-  .project-details dd {
-    padding-bottom: var(--space-3);
-  }
+  .resume-card { padding: var(--space-6) var(--space-5); }
 
-  /* --- Resume / contact --- */
-  .resume-card {
-    padding: var(--space-6) var(--space-5);
-  }
+  .resume-actions { flex-direction: column; }
+  .resume-actions .btn { width: 100%; }
 
-  .resume-actions {
-    flex-direction: column;
-  }
-
-  .resume-actions .btn {
-    width: 100%;
-  }
-
-  /* --- Grids collapse --- */
   .process-grid,
   .quick-facts,
   .skills-grid,
@@ -163,10 +98,7 @@
     grid-template-columns: 1fr;
   }
 
-  /* --- Footer --- */
-  .footer-links {
-    flex-wrap: wrap;
-  }
+  .footer-links { flex-wrap: wrap; }
 }
 
 /* ---------------------------------------------------------
@@ -185,13 +117,9 @@
     --space-7: 2.25rem;
   }
 
-  .section-header {
-    margin-bottom: var(--space-6);
-  }
+  .section-header { margin-bottom: var(--space-6); }
 
-  .project-filters {
-    gap: var(--space-1);
-  }
+  .project-filters { gap: var(--space-1); }
 
   .filter-btn {
     font-size: var(--font-size-xs);
@@ -203,21 +131,23 @@
     gap: var(--space-1);
   }
 
-  .journey-year {
-    font-size: var(--font-size-xs);
-  }
+  .journey-year { font-size: var(--font-size-xs); }
+  .journey-text { font-size: var(--font-size-sm); }
 
-  .journey-text {
-    font-size: var(--font-size-sm);
-  }
+  .btn { padding: var(--space-3) var(--space-4); }
 
-  .btn {
-    padding: var(--space-3) var(--space-4);
+  .lightbox-prev { left: var(--space-3); }
+  .lightbox-next { right: var(--space-3); }
+  .lightbox-prev,
+  .lightbox-next {
+    width: 38px;
+    height: 38px;
+    font-size: 1.25rem;
   }
 }
 
 /* ---------------------------------------------------------
-   4. SMALL MOBILE — up to 380px (iPhone SE, etc.)
+   4. SMALL MOBILE — up to 380px
    --------------------------------------------------------- */
 @media (max-width: 380px) {
 
@@ -234,9 +164,7 @@
     font-size: var(--font-size-xs);
   }
 
-  .nav-label {
-    font-size: 0.6875rem; /* 11px */
-  }
+  .nav-label { font-size: var(--font-size-sm); }
 
   .hero-actions .btn,
   .resume-actions .btn {
@@ -269,21 +197,15 @@
    --------------------------------------------------------- */
 @media (hover: none) {
 
-  /* Remove hover-only effects on touch */
   .project-card:hover {
     transform: none;
     box-shadow: none;
   }
 
-  .cert-card:hover {
-    transform: none;
-  }
+  .cert-card:hover { transform: none; }
 
-  .project-card:hover .project-media img {
-    transform: none;
-  }
+  .project-card:hover .project-media img { transform: none; }
 
-  /* Ensure tap targets are at least 40px tall */
   .nav-link,
   .filter-btn,
   .btn {
@@ -298,6 +220,7 @@
 
   .site-header,
   .theme-toggle,
+  .menu-toggle,
   .project-filters,
   .hero-actions,
   .hero-socials,
