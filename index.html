@@ -1,505 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Njabulo Rikhotso | Junior Software Developer</title>
-  <meta name="description" content="Portfolio of Njabulo Rikhotso, a Computer Science developer focused on Java, backend development, web applications and databases.">
+    <title>Njabulo Rikhotso | Junior Software Developer</title>
+    <meta name="description"
+        content="Portfolio of Njabulo Rikhotso, a Computer Science developer focused on Java, backend development, web applications and databases.">
 
-  <meta property="og:title" content="Njabulo Rikhotso | Junior Software Developer">
-  <meta property="og:description" content="Computer Science developer focused on Java, backend development, web applications and databases.">
-  <meta property="og:type" content="website">
+    <meta property="og:title" content="Njabulo Rikhotso | Junior Software Developer">
+    <meta property="og:description"
+        content="Computer Science developer focused on Java, backend development, web applications and databases.">
+    <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
 
-      <a href="#home" class="brand" aria-label="Njabulo Rikhotso — Home">
-        <span class="brand-mark">NR</span>
-        <span class="brand-text">Njabulo Rikhotso</span>
-      </a>
-
-      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">
-        <span class="menu-icon" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
-
-      <nav class="primary-nav" id="primaryNav" aria-label="Section navigation">
-        <ol class="nav-list" id="navList">
-
-          <li class="nav-item" data-target="home">
-            <a href="#home" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Personal</span>
+            <a href="#home" class="brand" aria-label="Njabulo Rikhotso — Home">
+                <span class="brand-mark">NR</span>
+                <span class="brand-text">Njabulo Rikhotso</span>
             </a>
-          </li>
 
-          <li class="nav-item" data-target="projects">
-            <a href="#projects" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Projects</span>
-            </a>
-          </li>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation menu"
+                aria-expanded="false" aria-controls="primaryNav">
+                <span class="menu-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
 
-          <li class="nav-item" data-target="skills">
-            <a href="#skills" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Skills</span>
-            </a>
-          </li>
+            <nav class="primary-nav" id="primaryNav" aria-label="Section navigation">
+                <ol class="nav-list" id="navList">
 
-          <li class="nav-item" data-target="experience">
-            <a href="#experience" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Experience</span>
-            </a>
-          </li>
+                    <li class="nav-item" data-target="home">
+                        <a href="#home" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Personal</span>
+                        </a>
+                    </li>
 
-          <li class="nav-item" data-target="education">
-            <a href="#education" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Education</span>
-            </a>
-          </li>
+                    <li class="nav-item" data-target="projects">
+                        <a href="#projects" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Projects</span>
+                        </a>
+                    </li>
 
-          <li class="nav-item" data-target="certifications">
-            <a href="#certifications" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Certifications</span>
-            </a>
-          </li>
+                    <li class="nav-item" data-target="skills">
+                        <a href="#skills" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Skills</span>
+                        </a>
+                    </li>
 
-          <li class="nav-item" data-target="contact">
-            <a href="#contact" class="nav-link">
-              <span class="nav-marker" aria-hidden="true">•</span>
-              <span class="nav-label">Contact</span>
-            </a>
-          </li>
+                    <li class="nav-item" data-target="experience">
+                        <a href="#experience" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Experience</span>
+                        </a>
+                    </li>
 
-        </ol>
-      </nav>
+                    <li class="nav-item" data-target="education">
+                        <a href="#education" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Education</span>
+                        </a>
+                    </li>
 
-      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Change theme" aria-haspopup="true" aria-expanded="false">
-        <span class="theme-icon" aria-hidden="true">◐</span>
-        <span class="theme-label">Theme</span>
-      </button>
+                    <li class="nav-item" data-target="certifications">
+                        <a href="#certifications" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Certifications</span>
+                        </a>
+                    </li>
 
-    </div>
-  </header>
+                    <li class="nav-item" data-target="contact">
+                        <a href="#contact" class="nav-link">
+                            <span class="nav-marker" aria-hidden="true">•</span>
+                            <span class="nav-label">Contact</span>
+                        </a>
+                    </li>
 
-  <main>
+                </ol>
+            </nav>
 
-    <!-- HERO -->
-    <section id="home" class="section section-hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Junior Software Developer</p>
-          <h1 class="hero-name">Njabulo Rikhotso</h1>
-          <p class="hero-tagline">Java • Backend • Databases • Web • IT</p>
-          <p class="hero-intro">
-            Computer Science developer focused on building practical software,
-            web applications, APIs and database-driven systems, with an interest
-            in both software development and IT.
-          </p>
+            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Change theme" aria-haspopup="true"
+                aria-expanded="false">
+                <span class="theme-icon" aria-hidden="true">◐</span>
+                <span class="theme-label">Theme</span>
+            </button>
 
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="assets/documents/Njabulo_Rikhotso_CV.pdf" class="btn btn-secondary" download>Download CV</a>
-          </div>
-
-          <ul class="hero-socials" aria-label="Social links">
-            <li><a href="https://www.linkedin.com/in/njabulorikhotso/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/Njabulo25" target="_blank" rel="noopener">GitHub</a></li>
-          </ul>
         </div>
+    </header>
 
-        <aside class="status-card" aria-label="Current status">
-          <p class="status-eyebrow">Currently</p>
-          <p class="status-role">Junior Developer</p>
-          <p class="status-org">The Tech Giants</p>
-          <p class="status-location">Pretoria, South Africa</p>
-          <hr class="status-divider">
-          <p class="status-line">Software Development</p>
-          <p class="status-line">Computer Science</p>
-        </aside>
-      </div>
-    </section>
+    <main>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">About</p>
-          <h2 class="section-title">A short introduction</h2>
-        </header>
+        <!-- HERO -->
+        <section id="home" class="section section-hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">Junior Software Developer</p>
+                    <h1 class="hero-typing" aria-label="Hi, I'm Njabulo Rikhotso">
+                        <span class="hero-typing-text" id="typingText"
+                            data-typed="Hi, I'm Njabulo Rikhotso"></span><span class="hero-typing-cursor"
+                            aria-hidden="true"></span>
+                    </h1>
+                    <p class="hero-welcome" id="heroWelcome">Welcome to my portfolio.</p>
+                    <p class="hero-tagline">Java • Backend • Databases • Web • IT</p>
+                    <p class="hero-intro">
+                        Computer Science developer focused on building practical software,
+                        web applications, APIs and database-driven systems, with an interest
+                        in both software development and IT.
+                    </p>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <p>I am a Computer Science developer with a strong interest in software development and IT. My academic background has given me experience with Java, web development, databases, software engineering, mobile development and technical support.</p>
-            <p>I particularly enjoy backend development, database-driven applications and building systems that solve practical problems. I am also interested in the wider IT environment, including troubleshooting, systems, security and cloud technologies.</p>
-            <p>I currently work as a Junior Web Developer at The Tech Giants, where I am gaining professional experience while continuing to develop my technical skills.</p>
-          </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="assets/documents/Njabulo_Rikhotso_CV.pdf" class="btn btn-secondary" download>Download
+                            CV</a>
+                    </div>
 
-          <ul class="quick-facts">
-            <li><span class="fact-value">73%</span><span class="fact-label">Academic Average</span></li>
-            <li><span class="fact-value">Diploma</span><span class="fact-label">Computer Science</span></li>
-            <li><span class="fact-value">Java</span><span class="fact-label">Primary Development Focus</span></li>
-            <li><span class="fact-value">2026</span><span class="fact-label">Junior Developer</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW I WORK -->
-    <section id="how-i-work" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">How I Work</p>
-          <h2 class="section-title">A simple four-step process</h2>
-        </header>
-
-        <ol class="process-grid">
-          <li class="process-step"><span class="step-number">01</span><h3 class="step-title">Understand</h3><p class="step-text">Understand the problem and requirements.</p></li>
-          <li class="process-step"><span class="step-number">02</span><h3 class="step-title">Design</h3><p class="step-text">Plan the solution, data and user flow.</p></li>
-          <li class="process-step"><span class="step-number">03</span><h3 class="step-title">Build</h3><p class="step-text">Implement and test the solution.</p></li>
-          <li class="process-step"><span class="step-number">04</span><h3 class="step-title">Improve</h3><p class="step-text">Debug, optimise and refine.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Projects</p>
-          <h2 class="section-title">Selected work</h2>
-          <p class="section-subtitle">A small selection of academic and personal projects. Each one includes the problem, the solution, my role, and what I learned.</p>
-        </header>
-
-        <div class="project-filters" role="tablist" aria-label="Project categories">
-          <button class="filter-btn is-active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="backend">Backend</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="database">Database</button>
-          <button class="filter-btn" data-filter="personal">Personal</button>
-        </div>
-
-        <div class="project-list" id="projectList">
-
-          <article class="project-card" data-categories="personal backend database web">
-            <div class="project-media">
-              <figure class="project-gallery">
-                <img src="assets/images/projects/iron-scalper/iron-scalper-dashboard.png" alt="Iron Scalper web dashboard showing live balance, open positions and trade history" class="project-image-primary" loading="lazy" data-lightbox>
-                <div class="project-thumbnails">
-                  <img src="assets/images/projects/iron-scalper/iron-scalper-login.png" alt="Iron Scalper password-protected login screen" loading="lazy" data-lightbox>
-                  <img src="assets/images/projects/iron-scalper/iron-scalper-signals.png" alt="Iron Scalper upcoming signals panel showing entries in South African time" loading="lazy" data-lightbox>
+                    <ul class="hero-socials" aria-label="Social links">
+                        <li><a href="https://www.linkedin.com/in/njabulorikhotso/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/Njabulo25" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
                 </div>
-              </figure>
+
+                <aside class="status-card" aria-label="Current status">
+                    <p class="status-eyebrow">Currently</p>
+                    <p class="status-role">Junior Developer</p>
+                    <p class="status-org">The Tech Giants</p>
+                    <p class="status-location">Pretoria, South Africa</p>
+                    <hr class="status-divider">
+                    <p class="status-line">Software Development</p>
+                    <p class="status-line">Computer Science</p>
+                </aside>
             </div>
-            <div class="project-body">
-              <p class="project-type">Personal Project</p>
-              <h3 class="project-title">Iron Scalper</h3>
-              <p class="project-summary">A Python algorithmic trading robot for MetaTrader 5 that trades XAUUSD using two strategies, enforced risk rules and a live web dashboard.</p>
+        </section>
 
-              <ul class="project-tags">
-                <li>Python</li><li>MetaTrader 5</li><li>SQLite</li><li>Flask</li>
-              </ul>
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">About</p>
+                    <h2 class="section-title">A short introduction</h2>
+                </header>
 
-              <dl class="project-details">
-                <dt>Problem</dt><dd>Manual trading is inconsistent and hard to risk-manage.</dd>
-                <dt>Solution</dt><dd>An automated system that runs two strategies, enforces risk limits and stores every trade.</dd>
-                <dt>My Role</dt><dd>Solo developer — architecture, strategies, risk manager and dashboard.</dd>
-                <dt>Key Features</dt><dd>Daily Breakout strategy, London Scalper, 1% per-trade risk cap, 3% daily cap, 3-loss circuit breaker, SQLite logging, password-protected dashboard, state persistence, spread check, MT5 auto-reconnect.</dd>
-                <dt>What I Learned</dt><dd>Multi-strategy architecture, broker API integration, risk-first design and database-driven web dashboards.</dd>
-              </dl>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am a Computer Science developer with a strong interest in software development and IT. My
+                            academic background has given me experience with Java, web development, databases, software
+                            engineering, mobile development and technical support.</p>
+                        <p>I particularly enjoy backend development, database-driven applications and building systems
+                            that solve practical problems. I am also interested in the wider IT environment, including
+                            troubleshooting, systems, security and cloud technologies.</p>
+                        <p>I currently work as a Junior Web Developer at The Tech Giants, where I am gaining
+                            professional experience while continuing to develop my technical skills.</p>
+                    </div>
 
-              <div class="project-actions">
-                <a href="https://github.com/Njabulo25" class="btn btn-tertiary" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" data-categories="personal backend database">
-            <div class="project-media">
-              <figure class="project-gallery">
-                <img src="assets/images/projects/employee-management/employee-management-dashboard.png" alt="Employee Management System dashboard showing employee list and status management" class="project-image-primary" loading="lazy" data-lightbox>
-                <div class="project-thumbnails">
-                  <img src="assets/images/projects/employee-management/employee-management-all-employees.png" alt="Employee Management System all employees list" loading="lazy" data-lightbox>
-                  <img src="assets/images/projects/employee-management/employee-management-details.png" alt="Employee Management System employee details view" loading="lazy" data-lightbox>
-                  <img src="assets/images/projects/employee-management/employee-management-mobile.png" alt="Employee Management System mobile responsive view" loading="lazy" data-lightbox>
+                    <ul class="quick-facts">
+                        <li><span class="fact-value">73%</span><span class="fact-label">Academic Average</span></li>
+                        <li><span class="fact-value">Diploma</span><span class="fact-label">Computer Science</span></li>
+                        <li><span class="fact-value">Java</span><span class="fact-label">Primary Development
+                                Focus</span></li>
+                        <li><span class="fact-value">2026</span><span class="fact-label">Junior Developer</span></li>
+                    </ul>
                 </div>
-              </figure>
             </div>
-            <div class="project-body">
-              <p class="project-type">Personal Project</p>
-              <h3 class="project-title">Employee Management System</h3>
-              <p class="project-summary">A Java and Spring Boot application for managing employees, tracking status, archiving records and managing skills with database persistence.</p>
+        </section>
 
-              <ul class="project-tags">
-                <li>Java</li><li>Spring Boot</li><li>MySQL</li>
-              </ul>
+        <!-- HOW I WORK -->
+        <section id="how-i-work" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">How I Work</p>
+                    <h2 class="section-title">A simple four-step process</h2>
+                </header>
 
-              <dl class="project-details">
-                <dt>Problem</dt><dd>Managing employee records, statuses and skills across spreadsheets is error-prone.</dd>
-                <dt>Solution</dt><dd>A database-backed application with employee, status, archive and skills management.</dd>
-                <dt>My Role</dt><dd>Solo developer — backend, database design and application logic.</dd>
-                <dt>Key Features</dt><dd>Employee management, status tracking, archive functionality, skills management, MySQL persistence.</dd>
-                <dt>What I Learned</dt><dd>Spring Boot application structure, entity relationships and MySQL database design.</dd>
-              </dl>
-
-              <div class="project-actions">
-                <a href="https://github.com/Njabulo25" class="btn btn-tertiary" target="_blank" rel="noopener">GitHub</a>
-              </div>
+                <ol class="process-grid">
+                    <li class="process-step"><span class="step-number">01</span>
+                        <h3 class="step-title">Understand</h3>
+                        <p class="step-text">Understand the problem and requirements.</p>
+                    </li>
+                    <li class="process-step"><span class="step-number">02</span>
+                        <h3 class="step-title">Design</h3>
+                        <p class="step-text">Plan the solution, data and user flow.</p>
+                    </li>
+                    <li class="process-step"><span class="step-number">03</span>
+                        <h3 class="step-title">Build</h3>
+                        <p class="step-text">Implement and test the solution.</p>
+                    </li>
+                    <li class="process-step"><span class="step-number">04</span>
+                        <h3 class="step-title">Improve</h3>
+                        <p class="step-text">Debug, optimise and refine.</p>
+                    </li>
+                </ol>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Skills</p>
-          <h2 class="section-title">Technologies and areas I work in</h2>
-          <p class="section-subtitle">Skills are grouped and supported by evidence — not percentages.</p>
-        </header>
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Projects</p>
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-subtitle">A small selection of academic and personal projects. Each one includes
+                        the problem, the solution, my role, and what I learned.</p>
+                </header>
 
-        <div class="skills-grid">
-          <article class="skill-group"><h3 class="skill-group-title">Programming</h3><ul class="skill-list"><li>Java</li><li>JavaScript</li><li>Kotlin</li><li>Python</li></ul></article>
-          <article class="skill-group"><h3 class="skill-group-title">Backend</h3><ul class="skill-list"><li>Spring Boot</li><li>Jakarta EE</li><li>Hibernate</li><li>REST APIs</li><li>Java Web Applications</li></ul></article>
-          <article class="skill-group"><h3 class="skill-group-title">Databases</h3><ul class="skill-list"><li>MySQL</li><li>SQL</li><li>JDBC</li><li>PL/SQL</li><li>Database Development</li></ul></article>
-          <article class="skill-group"><h3 class="skill-group-title">Web</h3><ul class="skill-list"><li>HTML5</li><li>CSS</li><li>JavaScript</li><li>Web Application Development</li></ul></article>
-          <article class="skill-group"><h3 class="skill-group-title">Mobile</h3><ul class="skill-list"><li>Kotlin</li><li>Android</li><li>Android Jetpack</li></ul></article>
-          <article class="skill-group"><h3 class="skill-group-title">Software Engineering</h3><ul class="skill-list"><li>SDLC</li><li>Software Engineering Practices</li><li>Version Control</li><li>Git</li><li>GitHub</li></ul></article>
-          <article class="skill-group"><h3 class="skill-group-title">IT &amp; Systems</h3><ul class="skill-list"><li>Technical Support</li><li>Operating Systems</li><li>Information Security</li><li>Microsoft Office</li></ul></article>
-        </div>
-      </div>
-    </section>
+                <div class="project-filters" role="tablist" aria-label="Project categories">
+                    <button class="filter-btn is-active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="database">Database</button>
+                    <button class="filter-btn" data-filter="personal">Personal</button>
+                </div>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Experience</p>
-          <h2 class="section-title">Professional experience</h2>
-        </header>
+                <div class="project-list" id="projectList">
 
-        <ol class="timeline">
-          <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <p class="timeline-period">September 2026 — Present</p>
-              <h3 class="timeline-title">Junior Web Developer</h3>
-              <p class="timeline-org">The Tech Giants</p>
-              <p class="timeline-text">Working as a junior web developer, gaining professional experience while continuing to develop technical skills. Responsibilities include web development tasks and contributing to ongoing projects.</p>
+                    <article class="project-card" data-categories="personal backend database web">
+                        <div class="project-media">
+                            <figure class="project-gallery">
+                                <img src="assets/images/projects/iron-scalper/iron-scalper-dashboard.png"
+                                    alt="Iron Scalper web dashboard showing live balance, open positions and trade history"
+                                    class="project-image-primary" loading="lazy" data-lightbox>
+                                <div class="project-thumbnails">
+                                    <img src="assets/images/projects/iron-scalper/iron-scalper-login.png"
+                                        alt="Iron Scalper password-protected login screen" loading="lazy" data-lightbox>
+                                    <img src="assets/images/projects/iron-scalper/iron-scalper-signals.png"
+                                        alt="Iron Scalper upcoming signals panel showing entries in South African time"
+                                        loading="lazy" data-lightbox>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-type">Personal Project</p>
+                            <h3 class="project-title">Iron Scalper</h3>
+                            <p class="project-summary">A Python algorithmic trading robot for MetaTrader 5 that trades
+                                XAUUSD using two strategies, enforced risk rules and a live web dashboard.</p>
+
+                            <ul class="project-tags">
+                                <li>Python</li>
+                                <li>MetaTrader 5</li>
+                                <li>SQLite</li>
+                                <li>Flask</li>
+                            </ul>
+
+                            <dl class="project-details">
+                                <dt>Problem</dt>
+                                <dd>Manual trading is inconsistent and hard to risk-manage.</dd>
+                                <dt>Solution</dt>
+                                <dd>An automated system that runs two strategies, enforces risk limits and stores every
+                                    trade.</dd>
+                                <dt>My Role</dt>
+                                <dd>Solo developer — architecture, strategies, risk manager and dashboard.</dd>
+                                <dt>Key Features</dt>
+                                <dd>Daily Breakout strategy, London Scalper, 1% per-trade risk cap, 3% daily cap, 3-loss
+                                    circuit breaker, SQLite logging, password-protected dashboard, state persistence,
+                                    spread check, MT5 auto-reconnect.</dd>
+                                <dt>What I Learned</dt>
+                                <dd>Multi-strategy architecture, broker API integration, risk-first design and
+                                    database-driven web dashboards.</dd>
+                            </dl>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/Njabulo25" class="btn btn-tertiary" target="_blank"
+                                    rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-categories="personal backend database">
+                        <div class="project-media">
+                            <figure class="project-gallery">
+                                <img src="assets/images/projects/employee-management/employee-management-dashboard.png"
+                                    alt="Employee Management System dashboard showing employee list and status management"
+                                    class="project-image-primary" loading="lazy" data-lightbox>
+                                <div class="project-thumbnails">
+                                    <img src="assets/images/projects/employee-management/employee-management-all-employees.png"
+                                        alt="Employee Management System all employees list" loading="lazy"
+                                        data-lightbox>
+                                    <img src="assets/images/projects/employee-management/employee-management-details.png"
+                                        alt="Employee Management System employee details view" loading="lazy"
+                                        data-lightbox>
+                                    <img src="assets/images/projects/employee-management/employee-management-mobile.png"
+                                        alt="Employee Management System mobile responsive view" loading="lazy"
+                                        data-lightbox>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-type">Personal Project</p>
+                            <h3 class="project-title">Employee Management System</h3>
+                            <p class="project-summary">A Java and Spring Boot application for managing employees,
+                                tracking status, archiving records and managing skills with database persistence.</p>
+
+                            <ul class="project-tags">
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>MySQL</li>
+                            </ul>
+
+                            <dl class="project-details">
+                                <dt>Problem</dt>
+                                <dd>Managing employee records, statuses and skills across spreadsheets is error-prone.
+                                </dd>
+                                <dt>Solution</dt>
+                                <dd>A database-backed application with employee, status, archive and skills management.
+                                </dd>
+                                <dt>My Role</dt>
+                                <dd>Solo developer — backend, database design and application logic.</dd>
+                                <dt>Key Features</dt>
+                                <dd>Employee management, status tracking, archive functionality, skills management,
+                                    MySQL persistence.</dd>
+                                <dt>What I Learned</dt>
+                                <dd>Spring Boot application structure, entity relationships and MySQL database design.
+                                </dd>
+                            </dl>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/Njabulo25" class="btn btn-tertiary" target="_blank"
+                                    rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </li>
-        </ol>
-      </div>
-    </section>
+        </section>
 
-    <!-- JOURNEY -->
-    <section id="journey" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Tech Journey</p>
-          <h2 class="section-title">How I got here</h2>
-        </header>
+        <!-- SKILLS -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Skills</p>
+                    <h2 class="section-title">Technologies and areas I work in</h2>
+                    <p class="section-subtitle">Skills are grouped and supported by evidence — not percentages.</p>
+                </header>
 
-        <ol class="journey-list">
-          <li class="journey-item"><span class="journey-year">2023</span><p class="journey-text">Started Computer Science</p></li>
-          <li class="journey-item"><span class="journey-year">2024</span><p class="journey-text">Web Development, JavaScript, Version Control, Certifications</p></li>
-          <li class="journey-item"><span class="journey-year">2025</span><p class="journey-text">Java, Databases, Software Projects</p></li>
-          <li class="journey-item"><span class="journey-year">2026</span><p class="journey-text">Theoretical Coursework Completed</p></li>
-          <li class="journey-item"><span class="journey-year">Sept 2026</span><p class="journey-text">Junior Developer at The Tech Giants</p></li>
-          <li class="journey-item"><span class="journey-year">Now</span><p class="journey-text">Building, learning, improving</p></li>
-        </ol>
-      </div>
-    </section>
+                <div class="skills-grid">
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">Programming</h3>
+                        <ul class="skill-list">
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Kotlin</li>
+                            <li>Python</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">Backend</h3>
+                        <ul class="skill-list">
+                            <li>Spring Boot</li>
+                            <li>Jakarta EE</li>
+                            <li>Hibernate</li>
+                            <li>REST APIs</li>
+                            <li>Java Web Applications</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">Databases</h3>
+                        <ul class="skill-list">
+                            <li>MySQL</li>
+                            <li>SQL</li>
+                            <li>JDBC</li>
+                            <li>PL/SQL</li>
+                            <li>Database Development</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">Web</h3>
+                        <ul class="skill-list">
+                            <li>HTML5</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Web Application Development</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">Mobile</h3>
+                        <ul class="skill-list">
+                            <li>Kotlin</li>
+                            <li>Android</li>
+                            <li>Android Jetpack</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">Software Engineering</h3>
+                        <ul class="skill-list">
+                            <li>SDLC</li>
+                            <li>Software Engineering Practices</li>
+                            <li>Version Control</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </article>
+                    <article class="skill-group">
+                        <h3 class="skill-group-title">IT &amp; Systems</h3>
+                        <ul class="skill-list">
+                            <li>Technical Support</li>
+                            <li>Operating Systems</li>
+                            <li>Information Security</li>
+                            <li>Microsoft Office</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Education</p>
-          <h2 class="section-title">Academic background</h2>
-        </header>
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Experience</p>
+                    <h2 class="section-title">Professional experience</h2>
+                </header>
 
-        <article class="education-card">
-          <p class="education-period">In Progress</p>
-          <h3 class="education-title">Diploma in Computer Science</h3>
-          <p class="education-org">Tshwane University of Technology</p>
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-period">September 2026 — Present</p>
+                            <h3 class="timeline-title">Junior Web Developer</h3>
+                            <p class="timeline-org">The Tech Giants</p>
+                            <p class="timeline-text">Working as a junior web developer, gaining professional experience
+                                while continuing to develop technical skills. Responsibilities include web development
+                                tasks and contributing to ongoing projects.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-          <ul class="education-facts">
-            <li><strong>Academic Average:</strong> 73%</li>
-            <li><strong>Theoretical Coursework:</strong> Completed</li>
-            <li><strong>WIL Component:</strong> In Progress</li>
-          </ul>
+        <!-- JOURNEY -->
+        <section id="journey" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Tech Journey</p>
+                    <h2 class="section-title">How I got here</h2>
+                </header>
 
-          <p class="education-focus-title">Focus areas</p>
-          <ul class="education-focus">
-            <li>Software Development</li><li>Database Programming</li><li>Internet Programming</li>
-            <li>Mobile Computing</li><li>Software Engineering</li><li>Information Security</li><li>Database Development</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+                <ol class="journey-list">
+                    <li class="journey-item"><span class="journey-year">2023</span>
+                        <p class="journey-text">Started Computer Science</p>
+                    </li>
+                    <li class="journey-item"><span class="journey-year">2024</span>
+                        <p class="journey-text">Web Development, JavaScript, Version Control, Certifications</p>
+                    </li>
+                    <li class="journey-item"><span class="journey-year">2025</span>
+                        <p class="journey-text">Java, Databases, Software Projects</p>
+                    </li>
+                    <li class="journey-item"><span class="journey-year">2026</span>
+                        <p class="journey-text">Theoretical Coursework Completed</p>
+                    </li>
+                    <li class="journey-item"><span class="journey-year">Sept 2026</span>
+                        <p class="journey-text">Junior Developer at The Tech Giants</p>
+                    </li>
+                    <li class="journey-item"><span class="journey-year">Now</span>
+                        <p class="journey-text">Building, learning, improving</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Certifications</p>
-          <h2 class="section-title">Courses and certifications</h2>
-          <p class="section-subtitle">Click any certificate to view it.</p>
-        </header>
+        <!-- EDUCATION -->
+        <section id="education" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Education</p>
+                    <h2 class="section-title">Academic background</h2>
+                </header>
 
-        <div class="cert-grid">
+                <article class="education-card">
+                    <p class="education-period">In Progress</p>
+                    <h3 class="education-title">Diploma in Computer Science</h3>
+                    <p class="education-org">Tshwane University of Technology</p>
 
-          <article class="cert-card"><p class="cert-group">Front-End Development</p><h3 class="cert-title">Introduction to Front-End Development</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/introduction-to-front-end-development.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <ul class="education-facts">
+                        <li><strong>Academic Average:</strong> 73%</li>
+                        <li><strong>Theoretical Coursework:</strong> Completed</li>
+                        <li><strong>WIL Component:</strong> In Progress</li>
+                    </ul>
 
-          <article class="cert-card"><p class="cert-group">Front-End Development</p><h3 class="cert-title">Programming with JavaScript</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/programming-with-javascript.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <p class="education-focus-title">Focus areas</p>
+                    <ul class="education-focus">
+                        <li>Software Development</li>
+                        <li>Database Programming</li>
+                        <li>Internet Programming</li>
+                        <li>Mobile Computing</li>
+                        <li>Software Engineering</li>
+                        <li>Information Security</li>
+                        <li>Database Development</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
-          <article class="cert-card"><p class="cert-group">Development Tools</p><h3 class="cert-title">Version Control</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/version-control.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Certifications</p>
+                    <h2 class="section-title">Courses and certifications</h2>
+                    <p class="section-subtitle">Click any certificate to view it.</p>
+                </header>
 
-          <article class="cert-card"><p class="cert-group">Front-End Development</p><h3 class="cert-title">HTML and CSS in Depth</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/html-and-css-in-depth.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                <div class="cert-grid">
 
-          <article class="cert-card"><p class="cert-group">Front-End Development</p><h3 class="cert-title">React Basics</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/react-basics.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <article class="cert-card">
+                        <p class="cert-group">Front-End Development</p>
+                        <h3 class="cert-title">Introduction to Front-End Development</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/introduction-to-front-end-development.pdf"
+                            class="cert-link" target="_blank" rel="noopener">View Certificate →</a>
+                    </article>
 
-          <article class="cert-card"><p class="cert-group">Front-End Development</p><h3 class="cert-title">Advanced React</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/advanced-react.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <article class="cert-card">
+                        <p class="cert-group">Front-End Development</p>
+                        <h3 class="cert-title">Programming with JavaScript</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/programming-with-javascript.pdf" class="cert-link"
+                            target="_blank" rel="noopener">View Certificate →</a>
+                    </article>
 
-          <article class="cert-card"><p class="cert-group">Front-End Development</p><h3 class="cert-title">Principles of UX/UI Design</h3><p class="cert-provider">Coursera · Meta</p><a href="assets/documents/certificates/principles-of-ux-ui-design.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <article class="cert-card">
+                        <p class="cert-group">Development Tools</p>
+                        <h3 class="cert-title">Version Control</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/version-control.pdf" class="cert-link" target="_blank"
+                            rel="noopener">View Certificate →</a>
+                    </article>
 
-          <article class="cert-card"><p class="cert-group">IT &amp; Cloud</p><h3 class="cert-title">Technical Support Fundamentals</h3><p class="cert-provider">Coursera · Google</p><a href="assets/documents/certificates/technical-support-fundamentals.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <article class="cert-card">
+                        <p class="cert-group">Front-End Development</p>
+                        <h3 class="cert-title">HTML and CSS in Depth</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/html-and-css-in-depth.pdf" class="cert-link"
+                            target="_blank" rel="noopener">View Certificate →</a>
+                    </article>
 
-          <article class="cert-card"><p class="cert-group">IT &amp; Cloud</p><h3 class="cert-title">AWS Fundamentals</h3><p class="cert-provider">Amazon Web Services</p><a href="assets/documents/certificates/aws-fundamentals.pdf" class="cert-link" target="_blank" rel="noopener">View Certificate →</a></article>
+                    <article class="cert-card">
+                        <p class="cert-group">Front-End Development</p>
+                        <h3 class="cert-title">React Basics</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/react-basics.pdf" class="cert-link" target="_blank"
+                            rel="noopener">View Certificate →</a>
+                    </article>
 
-        </div>
-      </div>
-    </section>
+                    <article class="cert-card">
+                        <p class="cert-group">Front-End Development</p>
+                        <h3 class="cert-title">Advanced React</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/advanced-react.pdf" class="cert-link" target="_blank"
+                            rel="noopener">View Certificate →</a>
+                    </article>
 
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Services</p>
-          <h2 class="section-title">What I Can Build</h2>
-          <p class="section-subtitle">Practical capabilities rather than consulting claims.</p>
-        </header>
+                    <article class="cert-card">
+                        <p class="cert-group">Front-End Development</p>
+                        <h3 class="cert-title">Principles of UX/UI Design</h3>
+                        <p class="cert-provider">Coursera · Meta</p><a
+                            href="assets/documents/certificates/principles-of-ux-ui-design.pdf" class="cert-link"
+                            target="_blank" rel="noopener">View Certificate →</a>
+                    </article>
 
-        <div class="services-grid">
-          <article class="service-card"><h3 class="service-title">Web Development</h3><p class="service-text">Responsive websites and web applications using HTML, CSS and JavaScript.</p></article>
-          <article class="service-card"><h3 class="service-title">Backend Development</h3><p class="service-text">Java and Spring Boot applications, APIs and business logic.</p></article>
-          <article class="service-card"><h3 class="service-title">Database Development</h3><p class="service-text">Database-driven applications using SQL and relational databases.</p></article>
-          <article class="service-card"><h3 class="service-title">Software Development</h3><p class="service-text">Practical software solutions based on requirements.</p></article>
-          <article class="service-card"><h3 class="service-title">Technical Support</h3><p class="service-text">Basic troubleshooting, system support and technical problem-solving.</p></article>
-        </div>
-      </div>
-    </section>
+                    <article class="cert-card">
+                        <p class="cert-group">IT &amp; Cloud</p>
+                        <h3 class="cert-title">Technical Support Fundamentals</h3>
+                        <p class="cert-provider">Coursera · Google</p><a
+                            href="assets/documents/certificates/technical-support-fundamentals.pdf" class="cert-link"
+                            target="_blank" rel="noopener">View Certificate →</a>
+                    </article>
 
-    <!-- CURRENTLY -->
-    <section id="currently" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Currently</p>
-          <h2 class="section-title">What I'm working on now</h2>
-        </header>
+                    <article class="cert-card">
+                        <p class="cert-group">IT &amp; Cloud</p>
+                        <h3 class="cert-title">AWS Fundamentals</h3>
+                        <p class="cert-provider">Amazon Web Services</p><a
+                            href="assets/documents/certificates/aws-fundamentals.pdf" class="cert-link" target="_blank"
+                            rel="noopener">View Certificate →</a>
+                    </article>
 
-        <ul class="currently-grid">
-          <li class="currently-item"><span class="currently-label">Working as</span><span class="currently-value">Junior Web Developer</span></li>
-          <li class="currently-item"><span class="currently-label">Learning</span><span class="currently-value">Spring Boot + PostgreSQL</span></li>
-          <li class="currently-item"><span class="currently-label">Building</span><span class="currently-value">Personal software projects</span></li>
-          <li class="currently-item"><span class="currently-label">Improving</span><span class="currently-value">Backend development, Database design, Software engineering</span></li>
-        </ul>
-      </div>
-    </section>
+                </div>
+            </div>
+        </section>
 
-    <!-- RESUME -->
-    <section id="resume" class="section">
-      <div class="container">
-        <div class="resume-card">
-          <p class="section-eyebrow">Resume</p>
-          <h2 class="resume-title">Want to know more about my experience?</h2>
-          <p class="resume-text">Download my CV for a full summary of my experience, education and technical background.</p>
-          <div class="resume-actions">
-            <a href="assets/documents/Njabulo_Rikhotso_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">View CV</a>
-            <a href="assets/documents/Njabulo_Rikhotso_CV.pdf" class="btn btn-secondary" download>Download CV</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- SERVICES -->
+        <section id="services" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Services</p>
+                    <h2 class="section-title">What I Can Build</h2>
+                    <p class="section-subtitle">Practical capabilities rather than consulting claims.</p>
+                </header>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow">Contact</p>
-          <h2 class="section-title">Get in touch</h2>
-        </header>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-text">Responsive websites and web applications using HTML, CSS and JavaScript.
+                        </p>
+                    </article>
+                    <article class="service-card">
+                        <h3 class="service-title">Backend Development</h3>
+                        <p class="service-text">Java and Spring Boot applications, APIs and business logic.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3 class="service-title">Database Development</h3>
+                        <p class="service-text">Database-driven applications using SQL and relational databases.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3 class="service-title">Software Development</h3>
+                        <p class="service-text">Practical software solutions based on requirements.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3 class="service-title">Technical Support</h3>
+                        <p class="service-text">Basic troubleshooting, system support and technical problem-solving.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="contact-grid">
-          <div class="contact-info">
-            <p class="contact-name">Njabulo Rikhotso</p>
-            <ul class="contact-list">
-              <li><span class="contact-label">Email</span><a href="mailto:njabulontsako49@gmail.com">njabulontsako49@gmail.com</a></li>
-              <li><span class="contact-label">Phone</span><a href="tel:+27749392850">074 939 2850</a></li>
-              <li><span class="contact-label">Location</span><span>Pretoria, South Africa</span></li>
-              <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/njabulorikhotso/" target="_blank" rel="noopener">linkedin.com/in/njabulorikhotso</a></li>
-              <li><span class="contact-label">GitHub</span><a href="https://github.com/Njabulo25" target="_blank" rel="noopener">github.com/Njabulo25</a></li>
+        <!-- CURRENTLY -->
+        <section id="currently" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Currently</p>
+                    <h2 class="section-title">What I'm working on now</h2>
+                </header>
+
+                <ul class="currently-grid">
+                    <li class="currently-item"><span class="currently-label">Working as</span><span
+                            class="currently-value">Junior Web Developer</span></li>
+                    <li class="currently-item"><span class="currently-label">Learning</span><span
+                            class="currently-value">Spring Boot + PostgreSQL</span></li>
+                    <li class="currently-item"><span class="currently-label">Building</span><span
+                            class="currently-value">Personal software projects</span></li>
+                    <li class="currently-item"><span class="currently-label">Improving</span><span
+                            class="currently-value">Backend development, Database design, Software engineering</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- RESUME -->
+        <section id="resume" class="section">
+            <div class="container">
+                <div class="resume-card">
+                    <p class="section-eyebrow">Resume</p>
+                    <h2 class="resume-title">Want to know more about my experience?</h2>
+                    <p class="resume-text">Download my CV for a full summary of my experience, education and technical
+                        background.</p>
+                    <div class="resume-actions">
+                        <a href="assets/documents/Njabulo_Rikhotso_CV.pdf" class="btn btn-primary" target="_blank"
+                            rel="noopener">View CV</a>
+                        <a href="assets/documents/Njabulo_Rikhotso_CV.pdf" class="btn btn-secondary" download>Download
+                            CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Contact</p>
+                    <h2 class="section-title">Get in touch</h2>
+                </header>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-name">Njabulo Rikhotso</p>
+                        <ul class="contact-list">
+                            <li><span class="contact-label">Email</span><a
+                                    href="mailto:njabulontsako49@gmail.com">njabulontsako49@gmail.com</a></li>
+                            <li><span class="contact-label">Phone</span><a href="tel:+27749392850">074 939 2850</a></li>
+                            <li><span class="contact-label">Location</span><span>Pretoria, South Africa</span></li>
+                            <li><span class="contact-label">LinkedIn</span><a
+                                    href="https://www.linkedin.com/in/njabulorikhotso/" target="_blank"
+                                    rel="noopener">linkedin.com/in/njabulorikhotso</a></li>
+                            <li><span class="contact-label">GitHub</span><a href="https://github.com/Njabulo25"
+                                    target="_blank" rel="noopener">github.com/Njabulo25</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-field"><label for="contact-name">Name</label><input type="text"
+                                id="contact-name" name="name" required></div>
+                        <div class="form-field"><label for="contact-email">Email</label><input type="email"
+                                id="contact-email" name="email" required></div>
+                        <div class="form-field"><label for="contact-subject">Subject</label><input type="text"
+                                id="contact-subject" name="subject" required></div>
+                        <div class="form-field"><label for="contact-message">Message</label><textarea
+                                id="contact-message" name="message" rows="5" required></textarea></div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p class="form-note">Form submissions open your email client. A form service can be connected
+                            later.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <p class="footer-name">Njabulo Rikhotso</p>
+                <p class="footer-role">Junior Software Developer</p>
+                <p class="footer-tags">Java • Backend • Web • Databases</p>
+            </div>
+
+            <ul class="footer-links" aria-label="Footer links">
+                <li><a href="https://www.linkedin.com/in/njabulorikhotso/" target="_blank" rel="noopener">LinkedIn</a>
+                </li>
+                <li><a href="https://github.com/Njabulo25" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="mailto:njabulontsako49@gmail.com">Email</a></li>
             </ul>
-          </div>
-
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-field"><label for="contact-name">Name</label><input type="text" id="contact-name" name="name" required></div>
-            <div class="form-field"><label for="contact-email">Email</label><input type="email" id="contact-email" name="email" required></div>
-            <div class="form-field"><label for="contact-subject">Subject</label><input type="text" id="contact-subject" name="subject" required></div>
-            <div class="form-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" required></textarea></div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <p class="form-note">Form submissions open your email client. A form service can be connected later.</p>
-          </form>
         </div>
-      </div>
-    </section>
 
-  </main>
+        <div class="container footer-copy-wrap">
+            <p class="footer-copy">© <span data-current-year>2026</span> Njabulo Rikhotso. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <p class="footer-name">Njabulo Rikhotso</p>
-        <p class="footer-role">Junior Software Developer</p>
-        <p class="footer-tags">Java • Backend • Web • Databases</p>
-      </div>
-
-      <ul class="footer-links" aria-label="Footer links">
-        <li><a href="https://www.linkedin.com/in/njabulorikhotso/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/Njabulo25" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="mailto:njabulontsako49@gmail.com">Email</a></li>
-      </ul>
-    </div>
-
-    <div class="container footer-copy-wrap">
-      <p class="footer-copy">© <span data-current-year>2026</span> Njabulo Rikhotso. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/navigation.js"></script>
-  <script src="js/theme.js"></script>
-  <script src="js/project-filter.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form-validation.js"></script>
-  <script src="js/app.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/project-filter.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
+
 </html>

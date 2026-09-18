@@ -145,3 +145,55 @@
     init();
   }
 })();
+/* =========================================================
+   TYPING HERO
+   Types out the text in #typingText letter by letter.
+   Then reveals #heroWelcome.
+   ========================================================= */
+
+(function () {
+  'use strict';
+
+  function initTyping() {
+    const el = document.getElementById('typingText');
+    const welcome = document.getElementById('heroWelcome');
+    if (!el) return;
+
+    const fullText = el.getAttribute('data-typed') || '';
+    if (!fullText) return;
+
+    // Respect reduced motion — just show the text immediately
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (prefersReduced) {
+      el.textContent = fullText;
+      if (welcome) welcome.classList.add('is-visible');
+      return;
+    }
+
+    let index = 0;
+    const speed = 55; // milliseconds per character
+
+    function type() {
+      if (index < fullText.length) {
+        el.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(type, speed);
+      } else {
+        // Finished typing — reveal the welcome line
+        if (welcome) welcome.classList.add('is-visible');
+      }
+    }
+
+    // Start after a short pause
+    setTimeout(type, 400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTyping);
+  } else {
+    initTyping();
+  }
+})();
