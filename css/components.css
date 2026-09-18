@@ -205,18 +205,53 @@
   gap: var(--space-8);
   align-items: start;
 }
+
 .hero-portrait {
   position: relative;
   width: 250px;
   height: 250px;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
   border-radius: 50%;
-  overflow: hidden;
   border: 3px solid var(--color-surface);
   box-shadow: var(--shadow-md);
   background-color: var(--color-accent);
   transition: transform var(--transition-base),
               box-shadow var(--transition-base);
+  isolation: isolate;
+}
+
+/* Green glow behind the portrait */
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  filter: blur(6px);
+  z-index: -1;
+  opacity: 0.9;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Inner wrapper clips the image to the circle */
+.hero-portrait > .hero-photo,
+.hero-portrait > .hero-portrait-fallback {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.06); }
+}
+
+.hero-portrait:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-portrait:hover::before {
+  opacity: 1;
 }
 
 .hero-portrait:hover {
