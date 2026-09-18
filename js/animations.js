@@ -197,3 +197,67 @@
     initTyping();
   }
 })();
+/* =========================================================
+   SCROLL REVEAL
+   Adds .is-revealed to [data-reveal] elements as they enter
+   the viewport. Staggers items within grids.
+   ========================================================= */
+
+(function () {
+  'use strict';
+
+  function initScrollReveal() {
+    const elements = document.querySelectorAll('[data-reveal]');
+    if (!elements.length) return;
+
+    // Respect reduced motion — reveal everything immediately
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      elements.forEach(el => el.classList.add('is-revealed'));
+      return;
+    }
+
+    // Stagger helper — assigns a delay based on sibling index
+    const staggerContainers = [
+      '.process-grid',
+      '.skills-grid',
+      '.cert-grid',
+      '.services-grid',
+      '.currently-grid',
+      '.journey-list'
+    ];
+
+    staggerContainers.forEach(selector => {
+      const container = document.querySelector(selector);
+      if (!container) return;
+      const items = container.querySelectorAll('[data-reveal]');
+      items.forEach((item, i) => {
+        item.style.setProperty('--reveal-delay', `${i * 60}ms`);
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.1
+    });
+
+    elements.forEach(el => observer.observe(el));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+  } else {
+    initScrollReveal();
+  }
+})();

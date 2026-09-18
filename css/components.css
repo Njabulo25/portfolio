@@ -1244,3 +1244,29 @@
     order: 2;
   }
 }
+/* ---------------------------------------------------------
+   SCROLL REVEAL
+   Elements with [data-reveal] start hidden and fade up
+   when they enter the viewport.
+   --------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered reveal — children of grids come in one after another */
+.process-grid [data-reveal].is-revealed,
+.skills-grid [data-reveal].is-revealed,
+.cert-grid [data-reveal].is-revealed,
+.services-grid [data-reveal].is-revealed,
+.currently-grid [data-reveal].is-revealed,
+.journey-list [data-reveal].is-revealed {
+  transition-delay: var(--reveal-delay, 0ms);
+}
