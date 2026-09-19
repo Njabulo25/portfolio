@@ -743,8 +743,6 @@
 
 .timeline-item { position: relative; }
 
-
-
 .timeline-period {
   font-size: var(--font-size-sm);
   color: var(--color-text-soft);
@@ -1289,4 +1287,31 @@
 .currently-grid [data-reveal].is-revealed,
 .journey-list [data-reveal].is-revealed {
   transition-delay: var(--reveal-delay, 0ms);
+}
+/* ---------------------------------------------------------
+   TIMELINE MARKER PULSE
+   --------------------------------------------------------- */
+.timeline-marker {
+  position: absolute;
+  left: calc(-1 * var(--space-6) + 1px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-bg);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 60%, transparent);
+  animation: markerPulse 2.4s ease-out infinite;
+}
+
+@keyframes markerPulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 60%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-accent) 0%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 0%, transparent);
+  }
 }
